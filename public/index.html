@@ -6,7 +6,9 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Hubballi&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hubballi&family=Quicksand&display=swap" rel="stylesheet">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script src="https://kit.fontawesome.com/fa0e1fe1ec.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -192,11 +194,11 @@
     <!--FOOTER-->
     <section>
         <div class="w-full bg-black container mx-auto">
-            <footer class="px-4 grid grid-cols-6 py-2"> 
+            <footer class="px-4 grid grid-cols-8 py-2"> 
                 <div class="col-span-1">
 
                 </div>
-                <div class="px-4 pb-12 col-start-2 col-span-2 justify-start">
+                <div class="px-4 pb-12 col-start-2 col-span-3 justify-start">
                     <h3 class="py-4 pt-12 font-bold text-4xl uppercase" style="font-family: 'Hubballi', cursive;">Connect With Us</h3>
                     <span>
                         <a class="fa fa-instagram" style="font-size:1.6rem" href="https://www.instagram.com/ysbcottawa/?hl=en"></a>
@@ -204,11 +206,20 @@
                         <a class="pl-2 fa fa-youtube" style="font-size:1.6rem" href="https://www.youtube.com/channel/UC2R1CdMZmeOrOIabRjGdb1A"></a>
                     </span>
                 </div>
-                <div class="col-span-1 py-4 pt-12 font-bold text-lg" style="font-family: 'Hubballi', cursive;">
-                    <p>Test</p>
+                <div class="col-span-1 grid grid-rows-4 py-4 pt-12 font-bold text-lg" style="font-family: 'Hubballi', cursive;">
+                    <a href="#" class="row-span-1 text-gray-500">Home</a>
+                    <a href="about-us.html" class="row-span-1">About Us</a>
+                    <a href="our-events.html">Our Events</a>
+                    <a href="our-partners.html">Our Partners</a>
                 </div>
-                <div class="col-span-1">
-                    <p>Test</p>
+                <div class="col-span-2 grid grid-rows-3 py-4 pt-12 font-bold text-lg" style="font-family:'Quicksand',sans-serif;">
+                    <a class="row-span-1 text-2xl">Join our Email List</a>
+                    <form class="row-span-1">
+                        <label for="email"></label>
+                        <input class="text-sm rounded-md text-black p-1 focus:outline-none" type="text" placeholder="you@email.com" id="email" name="email">
+                        <label for="submit"></label>
+                        <input class="bg-green-400 transition transform hover:scale-105 p-1 text-sm rounded-md" type="submit" value="Join">
+                    </form>
                 </div>
 
 
