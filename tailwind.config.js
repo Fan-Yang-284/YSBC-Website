@@ -8,6 +8,9 @@ module.exports = {
       'mono': ['ui-monospace', 'SFMono-Regular'],
       'display': ['Oswald'],
       'body': ['"Open Sans"'],
+    },
+    fontSize: {
+      '12xl':"8rem",
     }
   },
   plugins: [],

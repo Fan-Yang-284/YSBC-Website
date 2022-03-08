@@ -47,8 +47,16 @@
         // Your web app's Firebase configuration
         // For Firebase JS SDK v7.20.0 and later, measurementId is optional
         const firebaseConfig = {
-        /*REDACTED*/
+          apiKey: "AIzaSyBKQ3vERVezCVWwVhLeRDg_KOUdZLtJKao",
+          authDomain: "ysbc-test.firebaseapp.com",
+          databaseURL: "https://ysbc-test-default-rtdb.firebaseio.com",
+          projectId: "ysbc-test",
+          storageBucket: "ysbc-test.appspot.com",
+          messagingSenderId: "570235010538",
+          appId: "1:570235010538:web:d06b99210ce9c11bd00693",
+          measurementId: "G-KWW7BF0CBN"
         };
+
 
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
@@ -87,12 +95,9 @@
                 <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4 transform transition hover:scale-105 duration-300 ease-in-out" href="our-partners.html">Our Partners</a>
               </li>
           </ul>
-          <button
-            id="navAction"
-            class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
-          >
+          <a id="navAction" target="_blank" href="https://www.eventbrite.ca/e/ysbc-business-and-technology-conference-tickets-280235500927" class="mx-auto lg:mx-0 bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
             Register!
-          </button>
+          </a>
         </div>
       </div>
       <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
@@ -214,11 +219,11 @@
                 </div>
                 <div class="col-span-2 grid grid-rows-3 py-4 pt-12 font-bold text-lg" style="font-family:'Quicksand',sans-serif;">
                     <a class="row-span-1 text-2xl">Join our Email List</a>
-                    <form class="row-span-1">
+                    <form id="emailForm" class="row-span-1">
                         <label for="email"></label>
                         <input class="text-sm rounded-md text-black p-1 focus:outline-none" type="text" placeholder="you@email.com" id="email" name="email">
                         <label for="submit"></label>
-                        <input class="bg-green-400 transition transform hover:scale-105 p-1 text-sm rounded-md" type="submit" value="Join">
+                        <button class="bg-green-400 transition transform hover:scale-105 p-1 text-sm rounded-md" type="submit">Join</button>
                     </form>
                 </div>
 

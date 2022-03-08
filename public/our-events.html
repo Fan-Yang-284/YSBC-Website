@@ -9,7 +9,7 @@
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <link rel="icon" type="image/x-icon" href="YSBCLogo.png">
     <title>YSBC - Our Events</title>
-
+    <script src="countdown.js"></script>
     <style>
         .gradient {
           background: linear-gradient(90deg, #36c8ed 0%, #3dd9d6 100%);
@@ -82,23 +82,17 @@
     </nav>
     <!--Hero-->
     <div class="pt-24">
-      <div class="container px-8 mx-auto flex flex-wrap flex-col md:flex-row items-center">
-        <!--Left Col-->
-        <div class="flex flex-col w-full md:w-3/5 justify-center items-start text-center md:text-left">
-          <p class="font-bold uppercase tracking-loose w-full">Inspiring our Youth</p>
-          <h1 class="my-4 text-5xl font-bold leading-tight">
-            Distancing Professionals with Aspiring Students
-          </h1>
-          <p class="leading-normal text-2xl mb-8">
-            Our mission is to reflect the fundamentals of STEM: research, exploration and growth. Through our conferences, we aim to make pathways in STEM approachable to all. 
-          </p>
-          <button class="z-50 mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-            <a href = "our-events.html">Learn more</a>
-          </button>
-        </div>
-        <!--Right Col-->
-        <div class="w-full align-right md:w-2/5 py-8 text-center transform transition hover:scale-105 duration-300 ease-in-out">
-          <img class="w-full md:w-4/5 z-50" src="JulienResized.png"/>
+      <div class="container px-8 mx-auto">
+        <!--Timer-->
+        <div id="countdown" class="grid grid-rows-2 grid-cols-6" style="font-size:8rem;">
+          <div class="col-start-2 px-2 justify-self-center"><span id="days"></span></div>
+          <div class="justify-self-center"><span id="hours"></span></div>
+          <div class="justify-self-center"><span id="minutes"></span></div>
+          <div class="justify-self-center"><span id="seconds"></span></div>
+          <div class="text-4xl justify-self-center col-start-2" >Days</div>
+          <div class="text-4xl justify-self-center " >Hours</div>
+          <div class="text-4xl justify-self-center " >Minutes</div>
+          <div class="text-4xl justify-self-center " >Seconds</div>
         </div>
       </div>
     </div>
