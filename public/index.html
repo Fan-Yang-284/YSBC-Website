@@ -337,6 +337,7 @@
     emailButton.addEventListener('click',writeData)
     //Write email in database
     function writeData(){
+      emailButton.disabled = true
       var inputEmail = emailValue.value;
       console.log(inputEmail)
       var userId = Math.round(new Date().getTime())
