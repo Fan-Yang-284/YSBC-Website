@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" type="image/x-icon" href="YSBCLogo.png">
     <link rel="stylesheet" href="onscroll.css">
+    <script src="https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.5.0/firebase-database.js"></script>
     <title>YSBC - Home</title>
 
     <style>
@@ -37,30 +39,7 @@
             text-shadow: none;
         }
         
-      </style>
-      <script>
-          // Import the functions you need from the SDKs you need
-        import { initializeApp } from "firebase/app";
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
-
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-        const firebaseConfig = {
-          apiKey: "AIzaSyBKQ3vERVezCVWwVhLeRDg_KOUdZLtJKao",
-          authDomain: "ysbc-test.firebaseapp.com",
-          databaseURL: "https://ysbc-test-default-rtdb.firebaseio.com",
-          projectId: "ysbc-test",
-          storageBucket: "ysbc-test.appspot.com",
-          messagingSenderId: "570235010538",
-          appId: "1:570235010538:web:d06b99210ce9c11bd00693",
-          measurementId: "G-KWW7BF0CBN"
-        };
-
-
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-      </script>
+    </style>
 </head>
 <body class="leading-normal tracking-normal text-white gradient" style="font-family: 'Source Sans Pro', sans-serif;">
     <!--Nav-->
@@ -192,16 +171,12 @@
         </div>
       </div>
     </section>
-    <!--MAILING LIST FORM-->
-    <section>
 
-    </section>
     <!--FOOTER-->
     <section>
         <div class="w-full bg-black container mx-auto">
             <footer class="px-4 grid grid-cols-8 py-2"> 
                 <div class="col-span-1">
-
                 </div>
                 <div class="px-4 pb-12 col-start-2 col-span-3 justify-start">
                     <h3 class="py-4 pt-12 font-bold text-4xl uppercase" style="font-family: 'Hubballi', cursive;">Connect With Us</h3>
@@ -218,16 +193,12 @@
                     <a href="our-partners.html">Our Partners</a>
                 </div>
                 <div class="col-span-2 grid grid-rows-3 py-4 pt-12 font-bold text-lg" style="font-family:'Quicksand',sans-serif;">
-                    <a class="row-span-1 text-2xl">Join our Email List</a>
-                    <form id="emailForm" class="row-span-1">
-                        <label for="email"></label>
-                        <input class="text-sm rounded-md text-black p-1 focus:outline-none" type="text" placeholder="you@email.com" id="email" name="email">
-                        <label for="submit"></label>
-                        <button class="bg-green-400 transition transform hover:scale-105 p-1 text-sm rounded-md" type="submit">Join</button>
-                    </form>
+                  <a class="row-span-1 text-2xl">Join our Email List</a>
+                  <div class="row-span-1">
+                    <input class="text-sm w-1/2 rounded-md text-black p-1 focus:outline-none" type="email" placeholder="you@email.com" id="email">
+                    <button id="abcde" class="w-2/5 bg-green-400 transition transform hover:scale-105 p-1 text-sm rounded-md">Join</button>
+                  </div>
                 </div>
-
-
             </footer>
         </div>
     </section>
@@ -332,8 +303,46 @@
       }
     }
     window.addEventListener("scroll", reveal);
-
     </script>
-    
   </body>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: 'AIzaSyBKQ3vERVezCVWwVhLeRDg_KOUdZLtJKao',
+      authDomain: "ysbc-test.firebaseapp.com",
+      databaseURL: "https://ysbc-test-default-rtdb.firebaseio.com",
+      projectId: "ysbc-test",
+      storageBucket: "ysbc-test.appspot.com",
+      messagingSenderId: "570235010538",
+      appId: '1:570235010538:web:d06b99210ce9c11bd00693',
+      measurementId: "G-KWW7BF0CBN"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+
+    import {getDatabase, set, ref, child, update, remove, get} from "https://www.gstatic.com/firebasejs/9.6.8/firebase-database.js";
+
+    const db = getDatabase(app);
+  
+    var emailValue = document.getElementById("email")
+    var emailButton = document.getElementById("abcde")
+    emailButton.addEventListener('click',writeData)
+    //Write email in database
+    function writeData(){
+      var inputEmail = emailValue.value;
+      console.log(inputEmail)
+      var userId = Math.round(new Date().getTime())
+      set(ref(db,"users/"+userId),{
+        emailAddress: inputEmail
+      })
+    }
+  </script>
 </html>
