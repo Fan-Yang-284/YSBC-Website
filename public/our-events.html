@@ -7,35 +7,22 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+    <!--CDN for tailwind-elements-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" type="image/x-icon" href="YSBCLogo.png">
     <title>YSBC - Our Events</title>
     <script src="countdown.js"></script>
+    <script src="./TW-ELEMENTS-PATH/dist/js/index.min.js"></script>
+
     <style>
         .gradient {
           background: linear-gradient(90deg, #36c8ed 0%, #3dd9d6 100%);
         }
       </style>
-      <script>
-          // Import the functions you need from the SDKs you need
-        import { initializeApp } from "firebase/app";
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
-
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-        const firebaseConfig = {
-        apiKey: "AIzaSyBKQ3vERVezCVWwVhLeRDg_KOUdZLtJKao",
-        authDomain: "ysbc-test.firebaseapp.com",
-        projectId: "ysbc-test",
-        storageBucket: "ysbc-test.appspot.com",
-        messagingSenderId: "570235010538",
-        appId: "1:570235010538:web:d06b99210ce9c11bd00693",
-        measurementId: "G-KWW7BF0CBN"
-        };
-
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-      </script>
 </head>
 <body class="leading-normal tracking-normal text-white gradient" style="font-family: 'Source Sans Pro', sans-serif;">
     <!--Nav-->
@@ -118,11 +105,143 @@
     <section class="bg-white border-b py-8">
       <div class="container max-w-5xl mx-auto m-8">
         <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
-          Title
+          Our Events
         </h1>
         <div class="w-full mb-4">
           <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
         </div>
+        <div class="w-full text-xl text-center text-black m-4">
+          We currently do not have any new events planned for the coming months. Visit this page regularly to get updates! For now, feel free to take a look at some of our past events.
+        </div>
+        <div id="carouselExampleControls" class="carousel slide relative rounded-t" data-bs-ride="carousel">
+          <div class="carousel-inner relative w-full ">
+
+            <!--Event 1-->
+            <div class="carousel-item active relative float-left w-full">
+              
+              <div class="flex justify-center shadow-lg rounded-t-lg">
+                <div class="flex w-full flex-col md:flex-row rounded-lg bg-gray-200 shadow-lg">
+                    <img class=" w-full h-96 w-2/5 md:h-auto rounded-t-lg md:rounded-none md:rounded-l-lg" src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F117672419%2F487309936353%2F1%2Foriginal.20201113-225548?h=230&w=460&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C66%2C1200%2C600&s=36d6534b8301aab9ff002f22d9130765" alt="" />
+                  <div class="p-6 flex flex-col justify-start">
+                    <h5 class="text-gray-900 text-4xl font-medium mb-2">
+                      Conference #1 - Engineering
+                    </h5>
+                    <p class="text-gray-700 text-base mb-4">
+                      Aspiring and professional engineers from diverse fields will share their experiences and answer any questions you may have!
+                    </p>
+                    <br>
+                    <a href="https://www.eventbrite.ca/e/youth-stem-conference-1-engineering-tickets-126646293473?aff=ebdsoporgprofile" target="new">
+                    <button type="button" class="w-30 inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Learn More</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            <!--2-->
+            <div class="carousel-item relative float-left w-full">
+              <div class="flex justify-center shadow-lg rounded-t-lg">
+                <div class="flex w-full flex-col md:flex-row rounded-lg bg-gray-200 shadow-lg">
+                    <img class=" w-full h-96 w-2/5 md:h-auto object-cover rounded-t-lg md:rounded-none md:rounded-l-lg" src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F123674427%2F487309936353%2F1%2Foriginal.20210120-124834?h=230&w=460&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C32%2C1024%2C512&s=a1955b28c51c7324778fdb8c9d63d81a" alt="" />
+                  <div class="p-6 flex flex-col justify-start">
+                    <h5 class="text-gray-900 text-4xl font-medium mb-2">
+                      Conference #2 - Medicine
+                    </h5>
+                    <p class="text-gray-700 text-base mb-4">
+                      Learn experience and advice with med professors, med students and doctors with YSBC.
+                    </p>
+                    <br>
+                    <a href="https://www.eventbrite.ca/e/youth-stem-conference-1-engineering-tickets-126646293473?aff=ebdsoporgprofile" target="new">
+                      <button type="button" class="w-30 inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Learn More</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--3-->
+            <div class="carousel-item relative float-left w-full">
+              <div class="flex justify-center shadow-lg rounded-t-lg">
+                <div class="flex w-full flex-col md:flex-row rounded-lg bg-gray-200 shadow-lg">
+                    <img class=" w-full h-96 w-2/5 md:h-auto object-cover rounded-t-lg md:rounded-none md:rounded-l-lg" src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F133817135%2F487309936353%2F1%2Foriginal.20210429-190450?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C13%2C800%2C400&s=23c079de4cdeaa523838ce209470339f" alt="" />
+                  <div class="p-6 flex flex-col justify-start">
+                    <h5 class="text-gray-900 text-4xl font-medium mb-2">
+                      Conference #3 - Software Technology
+                    </h5>
+                    <p class="text-gray-700 text-base mb-4">
+                      Gain knowledge in one of the fastest growing fields in STEM today!
+                    </p>
+                    <br>
+                    <a href="https://www.eventbrite.ca/e/youth-stem-business-conference-3-software-technology-tickets-152911021983?aff=ebdsoporgprofile" target="new">
+                      <button type="button" class="w-30 inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Learn More</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--4-->
+            <div class="carousel-item relative float-left w-full">
+              
+              <div class="flex justify-center shadow-lg rounded-t-lg">
+                <div class="flex w-full flex-col md:flex-row rounded-lg bg-gray-200 shadow-lg">
+                    <img class=" w-full h-96 w-2/5 md:h-auto object-cover rounded-t-lg md:rounded-none md:rounded-l-lg" src=https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F179653989%2F487309936353%2F1%2Foriginal.20211103-202752?h=230&w=460&auto=format%2Ccompress&q=75&sharp=10&rect=28%2C0%2C644%2C322&s=80e144bfa3755b535178d990d14bb690" alt="" />
+                  <div class="p-6 flex flex-col justify-start">
+                    <h5 class="text-gray-900 text-4xl font-medium mb-2">Conference #4 - Biology</h5>
+                    <p class="text-gray-700 text-base mb-4">
+                      Our first conference of this year take a new focus - what can you do after high school with a high school biology course? Come find out!
+                    </p>
+                    <br>
+                    <a href="https://www.eventbrite.ca/e/ysbc-2021-conference-1-biology-tickets-204755357787?aff=ebdsoporgprofile" target="new">
+                      <button type="button" class="w-30 inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Learn More</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            <!--5-->
+            <div class="carousel-item relative float-left w-full">
+              <div class="flex justify-center shadow-lg rounded-t-lg">
+                <div class="flex w-full flex-col md:flex-row rounded-lg bg-gray-200 shadow-lg">
+                    <img class=" w-full h-96 w-2/5 md:h-auto object-cover rounded-t-lg md:rounded-none md:rounded-l-lg" src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F133817135%2F487309936353%2F1%2Foriginal.20210429-190450?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C13%2C800%2C400&s=23c079de4cdeaa523838ce209470339f" alt="" />
+                  <div class="p-6 flex flex-col justify-start">
+                    <h5 class="text-gray-900 text-3xl font-medium mb-2">
+                      Conference #5 - Business and Technology
+                    </h5>
+                    <p class="text-gray-700 text-base mb-4">
+                      Welcome to our second conference of the year! This time, we'll have speakers focused on technology, business, and ways to connect the two!
+                    </p>
+                    
+                    <br>
+                    <a href="https://www.eventbrite.ca/e/ysbc-business-and-technology-conference-tickets-280235500927?aff=ebdsoporgprofile" target="new">
+                      <button type="button" class="w-30 inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Learn More</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
+            type="button"
+            data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
+            type="button"
+            data-bs-target="#carouselExampleControls"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        
+        <!--
         <div class="flex flex-wrap">
           <div class="w-5/6 sm:w-1/2 p-6">
             <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
@@ -432,8 +551,39 @@
             </div>
           </div>
         </div>
+      -->
       </div>
     </section>
+    <!--FOOTER-->
+    <section class="w-full">
+      <div class="w-full bg-black mx-auto">
+          <footer class="px-4 grid grid-cols-8 py-2"> 
+              <div class="col-span-1">
+              </div>
+              <div class="px-4 pb-12 col-start-2 col-span-3 justify-start">
+                  <h3 class="py-4 pt-12 text-4xl uppercase" style="font-family: 'Source Sans Pro', sans-serif;">Connect With Us</h3>
+                  <span>
+                      <a class="fa fa-instagram" style="font-size:1.6rem" href="https://www.instagram.com/ysbcottawa/?hl=en"></a>
+                      <a class="pl-2 fa fa-linkedin" style="font-size:1.6rem" href="https://www.linkedin.com/company/ysbc/mycompany/"></a>
+                      <a class="pl-2 fa fa-youtube" style="font-size:1.6rem" href="https://www.youtube.com/channel/UC2R1CdMZmeOrOIabRjGdb1A"></a>
+                  </span>
+              </div>
+              <div class="col-span-1 grid grid-rows-4 py-4 pt-12 text-lg" style="font-family: 'Source Sans Pro', sans-serif;">
+                  <a href="#" class="row-span-1 text-gray-500">Home</a>
+                  <a href="about-us.html" class="row-span-1">About Us</a>
+                  <a href="our-events.html">Our Events</a>
+                  <a href="our-partners.html">Our Partners</a>
+              </div>
+              <div class="col-span-2 grid grid-rows-3 py-4 pt-12 font-bold text-lg" style="font-family: 'Source Sans Pro', sans-serif;">
+                <a class="row-span-1 text-2xl">Join our Email List</a>
+                <div class="row-span-1">
+                  <input class="text-sm w-1/2 rounded-md text-black p-1 focus:outline-none" type="email" placeholder="you@email.com" id="email">
+                  <button id="abcde" class="w-2/5 bg-green-400 transition transform hover:scale-105 p-1 text-sm rounded-md">Join</button>
+                </div>
+              </div>
+          </footer>
+      </div>
+  </section>
     
     <!-- jQuery if you need it
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -519,5 +669,47 @@
         return false;
       }
     </script>
+     <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: 'AIzaSyBKQ3vERVezCVWwVhLeRDg_KOUdZLtJKao',
+        authDomain: "ysbc-test.firebaseapp.com",
+        databaseURL: "https://ysbc-test-default-rtdb.firebaseio.com",
+        projectId: "ysbc-test",
+        storageBucket: "ysbc-test.appspot.com",
+        messagingSenderId: "570235010538",
+        appId: '1:570235010538:web:d06b99210ce9c11bd00693',
+        measurementId: "G-KWW7BF0CBN"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+  
+      import {getDatabase, set, ref, child, update, remove, get} from "https://www.gstatic.com/firebasejs/9.6.8/firebase-database.js";
+  
+      const db = getDatabase(app);
+    
+      var emailValue = document.getElementById("email")
+      var emailButton = document.getElementById("abcde")
+      emailButton.addEventListener('click',writeData)
+      //Write email in database
+      function writeData(){
+        emailButton.disabled = true
+        var inputEmail = emailValue.value;
+        console.log(inputEmail)
+        var userId = Math.round(new Date().getTime())
+        set(ref(db,"users/"+userId),{
+          emailAddress: inputEmail
+        })
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
   </body>
 </html>
